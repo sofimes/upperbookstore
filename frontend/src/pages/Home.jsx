@@ -1,8 +1,14 @@
 import React from "react";
+import Main from "../components/home/Main";
+import BookCollection from "../components/home/BookCollection";
 
 const Home = () => {
-  return;
-  //   <h1 class="text-3xl font-bold underline"> Hello world! </h1>;
+  return (
+    <div>
+      <Main />
+      <BookCollection />
+    </div>
+  );
 };
 
 export default Home;
