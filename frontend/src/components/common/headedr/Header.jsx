@@ -31,7 +31,7 @@ const Header = () => {
           <h2 className="text-xl font-bold text-primary  lg:text-3xl flex items-center ">
             {" "}
             <span
-              className="text-yellow-400 bg-black p-2 text-2xl rounded-2xl
+              className="text-yellow-400 bg-gray-700 p-2 text-2xl rounded-2xl
               lg:px-5 lg:text-3xl lg:py-3 lg:rounded-3xl lg:mr-2 md:mr-2
 
             "
@@ -50,7 +50,7 @@ const Header = () => {
         >
           <nav className="hidden md:flex items-center space-x-6 lg:my-4 md:space-x-4">
             <NavLink
-              to="/Books"
+              to="/"
               className="text-gray-700 hover:border-b-4 decoration-4 hover:border-yellow-400 transition hover:font-bold"
             >
               Home
@@ -80,7 +80,7 @@ const Header = () => {
               Contact
             </NavLink>
             <Link to="/login">
-              <button className="text-yellow-400 bg-black text-lg rounded-full px-4 py-2  hover:text-white transition  hover:animate-bounce lg:py-4 lg:px-8 lg:text-xl font-bold ">
+              <button className="text-yellow-400 bg-gray-700 text-lg rounded-full px-4 py-2  hover:text-white transition  hover:animate-bounce lg:py-4 lg:px-8 lg:text-xl font-bold ">
                 Login/Register
               </button>
             </Link>
@@ -131,7 +131,7 @@ const Header = () => {
               Contact
             </NavLink>
             <Link to="/Profile" onClick={toggleMenu}>
-              <button className="text-yellow-400 bg-black text-md rounded-full px-4 py-2  hover:text-white transition">
+              <button className="text-yellow-400 bg-gray-700 text-md rounded-full px-4 py-2  hover:text-white transition">
                 Login/Register
               </button>
             </Link>
