@@ -14,11 +14,11 @@ const BookCollection = () => {
   ];
 
   return (
-    <motion.div className=" relative mt-32 mb-20 flex flex-col justify-center items-center  lg:mx-48 overflow-x:hidden">
+    <motion.div className=" relative mt-32  flex flex-col justify-center items-center  lg:mx-48 overflow-x:hidden">
       <SearchBar />
-      <motion.div className="py-20 mt-12 px-6 lg:px-20 bg-white font-poppins">
+      <motion.div className="py-20 pb-8 mt-12 px-6 lg:px-20 bg-white font-poppins lg:mt-28 ">
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-4 w-full">
+          <div className="flex items-center justify-center mb-4 w-full lg:mb-8">
             <motion.span
               initial={{ width: 0 }}
               animate={{ width: "100%" }}
@@ -29,9 +29,9 @@ const BookCollection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="px-4 py-1 mx-3 rounded-full bg-gray-700 text-yellow-400 text-sm font-medium"
+              className="px-4 py-1 mx-3 rounded-full bg-gray-700 text-yellow-400 text-sm font-medium  lg:text-xl "
             >
-              Collections
+              Categories
             </motion.span>
             <motion.span
               initial={{ width: 0 }}
@@ -40,7 +40,7 @@ const BookCollection = () => {
               className="flex-grow border-t border-gray-400"
             ></motion.span>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mt-3">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mt-3 lg:mt-8">
             <motion.span
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
