@@ -66,7 +66,7 @@ const Main = () => {
             }}
             className="flex  gap-3 justify-center md:justify-start md:pl-12 lg:pl-20"
           >
-            <span className="text-amber-300">Upper</span>
+            <span className="text-amber-400">Upper</span>
             <span className="text-gray-500">Book</span>
           </motion.div>
         </motion.div>
@@ -79,9 +79,12 @@ const Main = () => {
           <span className="block text-amber-400 font-semibold text-lg mb-2">
             Your Gateway to Knowledge.
           </span>
-          <span className="text-gray-600">
+          <span className="text-gray-600 text-lg">
             Discover inspiring stories and timeless books at{" "}
-            <span className="font-semibold text-amber-400">Upper Book</span>.
+            <span className="font-semibold text-amber-400 text-lg ">
+              Upper Book
+            </span>
+            .
           </span>
         </motion.p>
       </motion.div>
