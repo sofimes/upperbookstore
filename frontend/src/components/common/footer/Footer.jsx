@@ -5,17 +5,17 @@ import { TbBrandLinkedin } from "react-icons/tb";
 
 const Footer = () => {
   return (
-    <footer className="w-full mt-34 ">
+    <footer className="w-full mt-34 lg:mt-40 ">
       {/* Newsletter / top card */}
-      <div className="mx-a lg:mx-48   ">
+      <div className="mx-a lg:mx-50 lg:px-4  md:mx-24 ">
         <div className="relative -mt-1 mb-12">
           <div className="bg-amber-400/80 rounded-3xl p-10  md:p-16 lg:py-30 text-white shadow-xl overflow-hidden ">
             <div className="max-w-4xl mx-auto flex flex-col items-center">
-              <button className="mb-6 bg-gray-900/90 text-white text-s px-5 py-1.5 rounded-full">
+              <button className="mb-10 bg-gray-900/90 text-white text-s px-5 py-1.5 rounded-full">
                 Get Discounts
               </button>
 
-              <h2 className="text-3xl md:text-5xl text-gray-600 font-extrabold drop-shadow-sm text-center">
+              <h2 className="text-3xl md:text-5xl text-gray-600 font-extrabold drop-shadow-sm text-center py-2">
                 Subscribe to newsletter
               </h2>
 
@@ -54,7 +54,7 @@ const Footer = () => {
       </div>
 
       {/* Main footer block */}
-      <div className="mx-auto  lg:mx-48">
+      <div className="mx-auto  lg:mx-50 lg:px-4 md:mx-24">
         <div className="bg-gray-100 rounded-3xl px-8 md:px-12 py-12 md:py-20 shadow-sm lg:pt-45">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Left area - logo + quote */}
