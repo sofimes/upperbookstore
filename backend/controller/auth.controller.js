@@ -1,0 +1,78 @@
+const { NODE_ENV } = require("../constants/env");
+
+const { loginUser } = require("../services/user.service");
+
+const { generateToken, verifyAndRefreshToken } = require("../utils/token");
+
+const loginController = async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const user = await loginUser({
+      email,
+      password,
+    });
+    const { accessToken, refreshToken } = generateToken({ id: user._id });
+
+    res.cookie("refreshToken", refreshToken, {
+      httpOnly: true,
+      maxAge: 7 * 24 * 60 * 60 * 1000,
+      secure: NODE_ENV === "production",
+      sameSite: "strict",
+    });
+    res.json({ accessToken, user });
+  } catch {
+    console.log(error);
+    res.json({ error: true, message: error.message });
+  }
+};
+
+const refreshTokenController = async (req, res) => {
+  const refreshToken = req.cookies.refreshToken;
+  try {
+    if (!refreshToken) {
+      throw new Error("Invalid refresh token");
+    }
+    const accessToken = await verifyAndRefreshToken(refreshToken);
+    res.json(accessToken);
+  } catch (error) {
+    console.error(error);
+    res.json({ error: true, message: error.message });
+  }
+};
+
+const logoutController = async (req, res) => {
+  try {
+    res.clearCookie("refreshToken");
+    req.session.destroy((error) => {
+      if (error) {
+        throw Error(error);
+      }
+    });
+    res.json("Successfully logged out ");
+  } catch (error) {
+    console.error(error);
+    res.json({ error: true, message: error.message });
+  }
+};
+
+const googleLoginController = async (req, res) => {
+  const { accessToken, refreshToken } = generateToken({
+    id: req.user._id,
+  });
+  res.cookies("refreshToken", refreshToken, {
+    httpOnly: true,
+    maxAge: 7 * 24 * 60 * 69 * 1000,
+    secure: NODE_ENV === "production",
+    sameSite: "strict",
+  });
+
+  const queryParams = new URLSearchParams({ accessToken });
+  res.redirect(`http://localhost:5173/`);
+};
+
+module.exports = {
+  loginController,
+  logoutController,
+  refreshTokenController,
+  googleLoginController,
+};
