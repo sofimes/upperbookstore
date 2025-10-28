@@ -48,7 +48,7 @@ const Main = () => {
     <div className=" w-full overflow-x-hidden">
       <motion.div
         style={{ scale, y, x }}
-        className="top-1 flex flex-col text-center justify-center items-center md:pt-60 sm:pt-32 pt-20 relative"
+        className="top-1 flex flex-col text-center justify-center items-center md:pt-60 sm:pt-32 pt-20 "
       >
         <motion.div
           initial={{ scale: 0.2 }}
