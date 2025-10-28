@@ -1,6 +1,6 @@
 const { NODE_ENV } = require("../constants/env");
 
-const { loginUser } = require("../services/user.service");
+const { loginUser, registerUser } = require("../services/user.service");
 
 const { generateToken, verifyAndRefreshToken } = require("../utils/token");
 
@@ -22,6 +22,17 @@ const loginController = async (req, res) => {
     res.json({ accessToken, user });
   } catch {
     console.log(error);
+    res.json({ error: true, message: error.message });
+  }
+};
+
+const registerReaderController = async (req, res) => {
+  const userData = req.body;
+  try {
+    const reader = registerUser({ userData, role: "reader" });
+    res.json(reader);
+  } catch (error) {
+    console.error(error);
     res.json({ error: true, message: error.message });
   }
 };
@@ -75,4 +86,5 @@ module.exports = {
   logoutController,
   refreshTokenController,
   googleLoginController,
+  registerReaderController,
 };
