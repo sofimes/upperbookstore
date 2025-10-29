@@ -5,6 +5,7 @@ const {
   logoutController,
   refreshTokenController,
   googleLoginController,
+  registerReaderController,
 } = require("../controller/auth.controller");
 
 const passport = require("passport");
@@ -14,7 +15,7 @@ const authRoute = Router();
 authRoute.post("/login", loginController);
 authRoute.post("/logout", logoutController);
 authRoute.post("/refreshToken", refreshTokenController);
-
+authRoute.post("/register", registerReaderController);
 authRoute.get(
   "/google",
   passport.authenticate("google", { scope: ["email", " profile"] })
