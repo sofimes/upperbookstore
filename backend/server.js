@@ -1,16 +1,18 @@
-const express = require("express");
 const dotenv = require("dotenv");
+dotenv.config();
+const express = require("express");
 const cookieParser = require("cookie-parser");
-const { PORT } = require("./constants/env");
+const { PORT } = require("./constants/env"); // safe: dotenv already loaded
 const { connectDB } = require("./config/db");
 const cors = require("cors");
 const { authRoute } = require("./routes/acc.route");
+require("./utils/passport"); // registers strategies as side-effects
 const passport = require("passport");
+
 const session = require("express-session");
 const app = express();
-
-dotenv.config();
 connectDB();
+
 app.use(express.json());
 app.use(cookieParser());
 
