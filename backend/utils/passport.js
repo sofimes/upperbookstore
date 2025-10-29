@@ -1,5 +1,4 @@
 const { ExtractJwt, Strategy: JwtStrategy } = require("passport-jwt");
-
 const passport = require("passport");
 
 const {
@@ -11,7 +10,7 @@ const {
 
 const { getUser, signInWithGoogle } = require("../services/user.service");
 
-const GoogleStrategy = require("passport-google-oauth20");
+const GoogleStrategy = require("passport-google-oauth20").Strategy;
 
 passport.serializeUser((user, done) => {
   done(null, user);
@@ -24,14 +23,14 @@ passport.deserializeUser((user, done) => {
 passport.use(
   new GoogleStrategy(
     {
-      clientId: GOOGLE_CLIENT_ID,
-      clientSexret: GOOGLE_CLIENT_SECRET,
+      clientID: GOOGLE_CLIENT_ID,
+      clientSecret: GOOGLE_CLIENT_SECRET,
       callbackURL: GOOGLE_CALLBACK_URL,
     },
 
     async (accessToken, refreshToken, profile, done) => {
       const fullName = profile.displayName;
-      const email = profile.email[0].value;
+      const email = profile.emails[0].value;
       const googleId = profile.id;
 
       const user = await signInWithGoogle({
@@ -64,3 +63,5 @@ passport.use(
     }
   })
 );
+
+module.exports = passport;
