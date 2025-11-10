@@ -20,7 +20,7 @@ const loginController = async (req, res) => {
       sameSite: "strict",
     });
     res.json({ accessToken, user });
-  } catch {
+  } catch (error) {
     console.log(error);
     res.json({ error: true, message: error.message });
   }
@@ -80,9 +80,21 @@ const googleLoginController = async (req, res) => {
   const queryParams = new URLSearchParams({ accessToken });
   res.redirect(`http://localhost:5173/`);
 };
-
+const getMeController = async (req, res) => {
+  try {
+    const user = req.user;
+    if (!user) {
+      return res.status(401).json({ error: true, message: "Unauthorized" });
+    }
+    return res.status(200).json(user);
+  } catch (error) {
+    console.error("Error in getMeController:", error);
+    return res.json({ error: true, message: error.message });
+  }
+};
 module.exports = {
   loginController,
+  getMeController,
   logoutController,
   refreshTokenController,
   googleLoginController,
