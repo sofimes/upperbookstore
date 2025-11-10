@@ -51,11 +51,11 @@ const opts = {
 passport.use(
   new JwtStrategy(opts, async (payload, done) => {
     try {
-      const user = await getUser(payload, done);
+      const userId = payload.id;
+      if (!userId) return done(null, false);
 
-      if (!user) {
-        throw new Error("User not found");
-      }
+      const user = await getUser(userId);
+      if (!user) return done(null, false);
 
       return done(null, user);
     } catch (error) {
