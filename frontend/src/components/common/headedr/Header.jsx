@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <header
       className={` top-0 left-0 w-full z-50 ${
-        scroll ? "bg-white shadow-lg " : "bg-transparent"
+        scroll ? "bg-white  " : "bg-transparent"
       } transition-all duration-300`}
     >
       <div className="container mx-auto flex justify-between items-center px-4  lg:px-12 ">
@@ -79,8 +79,8 @@ const Header = () => {
             >
               Contact
             </NavLink>
-            <Link to="/login">
-              <button className="text-yellow-400 bg-gray-700 text-lg rounded-full px-4 py-2  hover:text-white transition  hover:animate-bounce lg:py-4 lg:px-8 lg:text-xl font-bold ">
+            <Link to="/auth">
+              <button className="text-white bg-gray-700 hover:bg-gray-500 text-md rounded-full px-4 py-2  hover:text-white transition  lg:py-2 lg:px-7 lg:text-xl font-bold ">
                 Login/Register
               </button>
             </Link>
@@ -130,8 +130,8 @@ const Header = () => {
             >
               Contact
             </NavLink>
-            <Link to="/Profile" onClick={toggleMenu}>
-              <button className="text-yellow-400 bg-gray-700 text-md rounded-full px-4 py-2  hover:text-white transition">
+            <Link to="/auth" onClick={toggleMenu}>
+              <button className="text-white bg-gray-700 hover:bg-gray-500 text-md rounded-full px-4 py-2  hover:text-white transition">
                 Login/Register
               </button>
             </Link>
