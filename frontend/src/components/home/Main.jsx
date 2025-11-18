@@ -76,10 +76,10 @@ const Main = () => {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="mt-6 text-center text-gray-700 text-sm sm:text-base md:text-lg max-w-xl px-4 leading-relaxed tracking-wide"
         >
-          <span className="block text-amber-400 font-semibold text-lg mb-2">
+          <span className="block text-gray-600 font-semibold lg:text-xl mb-2 lg:my-3">
             Your Gateway to Knowledge.
           </span>
-          <span className="text-gray-600 text-lg">
+          <span className="text-gray-600 text-lg font-bold">
             Discover inspiring stories and timeless books at{" "}
             <span className="font-semibold text-amber-400 text-lg ">
               Upper Book
