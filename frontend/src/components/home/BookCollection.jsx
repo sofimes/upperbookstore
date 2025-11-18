@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import SearchBar from "../common/searchbar/SearchBar";
 import { bookcollections } from "../../utils/bookcollections";
 import BookCat from "../common/book/BookCat";
 
@@ -14,8 +13,7 @@ const BookCollection = () => {
   ];
 
   return (
-    <motion.div className=" relative mt-32  flex flex-col justify-center items-center  lg:mx-48 overflow-x:hidden">
-      <SearchBar />
+    <motion.div className=" relative mb-20  flex flex-col justify-center items-center  lg:mx-48 overflow-x:hidden">
       <motion.div className="py-20 pb-8 mt-12 px-6 lg:px-20 bg-white font-poppins lg:mt-28 ">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4 w-full lg:mb-8">
@@ -29,7 +27,7 @@ const BookCollection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="px-4 py-1 mx-3 rounded-full bg-gray-700 text-yellow-400 text-sm font-medium  lg:text-xl "
+              className="px-4 py-1 mx-3 rounded-full bg-gray-700 text-white text-sm font-medium  lg:text-xl "
             >
               Categories
             </motion.span>
