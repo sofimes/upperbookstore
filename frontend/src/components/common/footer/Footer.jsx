@@ -9,13 +9,13 @@ const Footer = () => {
       {/* Newsletter / top card */}
       <div className="mx-a lg:mx-50 lg:px-4  md:mx-24 ">
         <div className="relative -mt-1 mb-12">
-          <div className="bg-amber-400/80 rounded-3xl p-10  md:p-16 lg:py-30 text-white shadow-xl overflow-hidden ">
+          <div className="bg-gray-600 rounded-3xl p-10  md:p-16 lg:py-30 text-white shadow-xl overflow-hidden ">
             <div className="max-w-4xl mx-auto flex flex-col items-center">
-              <button className="mb-10 bg-gray-900/90 text-white text-s px-5 py-1.5 rounded-full">
+              <button className="mb-10 bg-gray-700/90 text-white text-s px-5 py-1.5 rounded-full">
                 Get Discounts
               </button>
 
-              <h2 className="text-3xl md:text-5xl text-gray-600 font-extrabold drop-shadow-sm text-center py-2">
+              <h2 className="text-3xl md:text-5xl text-white/80 font-extrabold drop-shadow-sm text-center py-2">
                 Subscribe to newsletter
               </h2>
 
@@ -28,7 +28,7 @@ const Footer = () => {
                   />
                   <button
                     type="submit"
-                    className="flex items-center gap-2 bg-gray-900/90 text-white px-6 py-3 rounded-full mr-1"
+                    className="flex items-center gap-2 bg-gray-700/90 text-white px-6 py-3 rounded-full mr-1"
                   >
                     <svg
                       className="w-4 h-4"
@@ -127,7 +127,7 @@ const Footer = () => {
           </div>
 
           {/* bottom social bar */}
-          <div className="mt-18 rounded-2xl bg-amber-400/80 px-6 py-4 flex items-center justify-between">
+          <div className="mt-18 rounded-2xl bg-gray-700/90 px-6 py-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <a
                 href="#"
@@ -168,7 +168,7 @@ const Footer = () => {
               </a>
             </div>
 
-            <div className="text-gray-500 text-sm">
+            <div className="text-white text-sm">
               © 2025 All rights reserved.
             </div>
           </div>
