@@ -10,6 +10,7 @@ require("./utils/passport"); // registers strategies as side-effects
 const passport = require("passport");
 
 const session = require("express-session");
+const bookRoute = require("./routes/book.route");
 const app = express();
 connectDB();
 
@@ -36,6 +37,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use("/api/auth", authRoute);
+app.use("/api/books", bookRoute);
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
