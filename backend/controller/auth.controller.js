@@ -29,7 +29,7 @@ const loginController = async (req, res) => {
 const registerReaderController = async (req, res) => {
   const userData = req.body;
   try {
-    const reader = registerUser({ userData, role: "reader" });
+    const reader = await registerUser({ userData, role: "reader" });
     res.json(reader);
   } catch (error) {
     console.error(error);
@@ -70,9 +70,9 @@ const googleLoginController = async (req, res) => {
   const { accessToken, refreshToken } = generateToken({
     id: req.user._id,
   });
-  res.cookies("refreshToken", refreshToken, {
+  res.cookie("refreshToken", refreshToken, {
     httpOnly: true,
-    maxAge: 7 * 24 * 60 * 69 * 1000,
+    maxAge: 7 * 24 * 60 * 60 * 1000,
     secure: NODE_ENV === "production",
     sameSite: "strict",
   });
