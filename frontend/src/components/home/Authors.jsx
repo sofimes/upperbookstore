@@ -18,7 +18,7 @@ const Authors = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="px-4 py-1 mx-3 rounded-full bg-gray-700 text-yellow-400 text-sm font-medium  lg:text-xl "
+              className="px-4 py-1 mx-3 rounded-full bg-gray-700 text-white text-sm font-medium  lg:text-xl "
             >
               Authors
             </motion.span>
