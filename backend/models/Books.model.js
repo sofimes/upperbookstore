@@ -16,6 +16,9 @@ const booksSchema = new mongoose.Schema(
       required: true,
       maxlength: 100,
     },
+    reviews: {
+      type: Number,
+    },
     description: {
       type: String,
       required: true,
