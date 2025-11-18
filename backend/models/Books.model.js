@@ -24,6 +24,12 @@ const booksSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    ratings: [
+      {
+        user: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
+        rating: { type: Number, min: 1, max: 5 },
+      },
+    ],
   },
   {
     timestamps: true,
