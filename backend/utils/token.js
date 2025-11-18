@@ -14,19 +14,16 @@ const generateToken = (data) => {
   return { accessToken, refreshToken };
 };
 const verifyAndRefreshToken = (refreshToken) => {
-  return new Promise(
-    (refreshToken,
-    REFRESH_TOKEN_SECRET,
-    {},
-    (err, userId) => {
-      if (err || typeof userId === "undefined")
+  return new Promise((resolve, reject) => {
+    jwt.verify(refreshToken, REFRESH_TOKEN_SECRET, {}, (err, payload) => {
+      if (err || typeof payload === "undefined")
         return reject(err || new Error("Invalid payload"));
-      const newAccessToken = jwt.sign({ id: userId }, ACCESS_TOKEN_SECRET, {
+      const newAccessToken = jwt.sign({ id: payload.id }, ACCESS_TOKEN_SECRET, {
         expiresIn: "15m",
       });
       resolve({ accessToken: newAccessToken });
-    })
-  );
+    });
+  });
 };
 const decodeToken = (accessToken) =>
   jwt.decode(accessToken, {
