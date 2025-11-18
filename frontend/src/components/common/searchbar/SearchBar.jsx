@@ -32,7 +32,7 @@ const SearchBar = () => {
 
         <button
           type="submit"
-          className="ml-2 rounded-full px-3 py-2 text-sm md:text-base font-medium bg-amber-400 hover:bg-amber-500 text-white transition"
+          className="ml-2 rounded-full px-3 py-2 text-sm md:text-base font-medium  text-white bg-gray-700 hover:bg-gray-500 transition"
           aria-label="Search"
         >
           Search
