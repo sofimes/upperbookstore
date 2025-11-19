@@ -24,7 +24,7 @@ const booksSchema = new mongoose.Schema(
       required: true,
     },
     category: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "BookCategory",
       required: true,
     },
