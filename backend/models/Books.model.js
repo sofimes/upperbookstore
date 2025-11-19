@@ -24,7 +24,8 @@ const booksSchema = new mongoose.Schema(
       required: true,
     },
     category: {
-      type: String,
+      type: Schema.Types.ObjectId,
+      ref: "BookCategory",
       required: true,
     },
     ratings: [
