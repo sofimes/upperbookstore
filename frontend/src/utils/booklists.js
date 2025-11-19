@@ -24,7 +24,7 @@ export const booklists = [
     link: "#",
   },
   {
-    id: 1,
+    id: 3,
     image:
       "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80",
     title: "Learn React: The Practical Guide",
@@ -37,7 +37,7 @@ export const booklists = [
     link: "#",
   },
   {
-    id: 2,
+    id: 4,
     image:
       "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80",
     title: "Designing Interfaces",
@@ -48,7 +48,7 @@ export const booklists = [
     link: "#",
   },
   {
-    id: 1,
+    id: 5,
     image:
       "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80",
     title: "Learn React: The Practical Guide",
@@ -61,7 +61,7 @@ export const booklists = [
     link: "#",
   },
   {
-    id: 2,
+    id: 6,
     image:
       "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80",
     title: "Designing Interfaces",
@@ -72,7 +72,7 @@ export const booklists = [
     link: "#",
   },
   {
-    id: 1,
+    id: 7,
     image:
       "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80",
     title: "Learn React: The Practical Guide",
@@ -85,7 +85,7 @@ export const booklists = [
     link: "#",
   },
   {
-    id: 2,
+    id: 8,
     image:
       "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80",
     title: "Designing Interfaces",
@@ -95,100 +95,100 @@ export const booklists = [
     reviews: 64,
     link: "#",
   },
-  {
-    id: 1,
-    image:
-      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80",
-    title: "Learn React: The Practical Guide",
-    author: "S. Johnson",
-    price: 450,
-    oldPrice: 600,
-    rating: 4.6,
-    reviews: 198,
-    isPrime: true,
-    link: "#",
-  },
-  {
-    id: 2,
-    image:
-      "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80",
-    title: "Designing Interfaces",
-    author: "J. Doe",
-    price: 350,
-    rating: 4.1,
-    reviews: 64,
-    link: "#",
-  },
-  {
-    id: 1,
-    image:
-      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80",
-    title: "Learn React: The Practical Guide",
-    author: "S. Johnson",
-    price: 450,
+  // {
+  //   id: 1,
+  //   image:
+  //     "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80",
+  //   title: "Learn React: The Practical Guide",
+  //   author: "S. Johnson",
+  //   price: 450,
+  //   oldPrice: 600,
+  //   rating: 4.6,
+  //   reviews: 198,
+  //   isPrime: true,
+  //   link: "#",
+  // },
+  // {
+  //   id: 2,
+  //   image:
+  //     "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80",
+  //   title: "Designing Interfaces",
+  //   author: "J. Doe",
+  //   price: 350,
+  //   rating: 4.1,
+  //   reviews: 64,
+  //   link: "#",
+  // },
+  // {
+  //   id: 1,
+  //   image:
+  //     "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80",
+  //   title: "Learn React: The Practical Guide",
+  //   author: "S. Johnson",
+  //   price: 450,
 
-    rating: 4.6,
-    reviews: 198,
-    isPrime: true,
-    link: "#",
-  },
-  {
-    id: 2,
-    image:
-      "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80",
-    title: "Designing Interfaces",
-    author: "J. Doe",
-    price: 350,
-    rating: 4.1,
-    reviews: 64,
-    link: "#",
-  },
-  {
-    id: 1,
-    image:
-      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80",
-    title: "Learn React: The Practical Guide",
-    author: "S. Johnson",
-    price: 450,
-    oldPrice: 600,
-    rating: 4.6,
-    reviews: 198,
-    isPrime: true,
-    link: "#",
-  },
-  {
-    id: 2,
-    image:
-      "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80",
-    title: "Designing Interfaces",
-    author: "J. Doe",
-    price: 350,
-    rating: 4.1,
-    reviews: 64,
-    link: "#",
-  },
-  {
-    id: 1,
-    image:
-      "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80",
-    title: "Learn React: The Practical Guide",
-    author: "S. Johnson",
-    price: 450,
-    oldPrice: 600,
-    rating: 4.6,
-    reviews: 198,
-    isPrime: true,
-    link: "#",
-  },
-  {
-    id: 2,
-    image:
-      "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80",
-    title: "Designing Interfaces",
-    author: "J. Doe",
-    price: 350,
-    rating: 4.1,
-    reviews: 64,
-    link: "#",
-  },
+  //   rating: 4.6,
+  //   reviews: 198,
+  //   isPrime: true,
+  //   link: "#",
+  // },
+  // {
+  //   id: 2,
+  //   image:
+  //     "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80",
+  //   title: "Designing Interfaces",
+  //   author: "J. Doe",
+  //   price: 350,
+  //   rating: 4.1,
+  //   reviews: 64,
+  //   link: "#",
+  // },
+  // {
+  //   id: 1,
+  //   image:
+  //     "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80",
+  //   title: "Learn React: The Practical Guide",
+  //   author: "S. Johnson",
+  //   price: 450,
+  //   oldPrice: 600,
+  //   rating: 4.6,
+  //   reviews: 198,
+  //   isPrime: true,
+  //   link: "#",
+  // },
+  // {
+  //   id: 2,
+  //   image:
+  //     "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80",
+  //   title: "Designing Interfaces",
+  //   author: "J. Doe",
+  //   price: 350,
+  //   rating: 4.1,
+  //   reviews: 64,
+  //   link: "#",
+  // },
+  // {
+  //   id: 1,
+  //   image:
+  //     "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80",
+  //   title: "Learn React: The Practical Guide",
+  //   author: "S. Johnson",
+  //   price: 450,
+  //   oldPrice: 600,
+  //   rating: 4.6,
+  //   reviews: 198,
+  //   isPrime: true,
+  //   link: "#",
+  // },
+  // {
+  //   id: 2,
+  //   image:
+  //     "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&q=80",
+  //   title: "Designing Interfaces",
+  //   author: "J. Doe",
+  //   price: 350,
+  //   rating: 4.1,
+  //   reviews: 64,
+  //   link: "#",
+  // },
 ];
