@@ -36,8 +36,9 @@ export const AuthProvider = ({ children }) => {
       user,
       login,
       logout,
+      accessToken,
     }),
-    [user, login, logout]
+    [user, login, logout, accessToken]
   );
 
   useEffect(() => {
