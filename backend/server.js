@@ -11,10 +11,12 @@ const passport = require("passport");
 
 const session = require("express-session");
 const bookRoute = require("./routes/book.route");
+const bookCategoryRoute = require("./routes/bookCategory.route");
 const app = express();
 connectDB();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.use(
@@ -35,9 +37,10 @@ app.use(
 
 app.use(passport.initialize());
 app.use(passport.session());
-
+app.use("/uploads", express.static("uploads"));
 app.use("/api/auth", authRoute);
 app.use("/api/books", bookRoute);
+app.use("/api/bookCategory", bookCategoryRoute);
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);

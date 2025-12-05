@@ -4,7 +4,7 @@ const {
   addBookCategory,
   updateBookCategory,
   deleteBookCategory,
-} = require("../services/BookCategory.service");
+} = require("../services/bookCategory.service");
 
 const getBookCategoriesController = async (req, res) => {
   try {
@@ -37,9 +37,15 @@ const getBookCategoryController = async (req, res) => {
 const postBookCategoryController = async (req, res) => {
   try {
     const categoryData = req.body;
+    console.log(categoryData);
+    if (!categoryData.image) {
+      return res
+        .status(400)
+        .json({ error: true, message: "Image is required" });
+    }
 
     if (!categoryData) {
-      throw new Error("Invalid Book category data");
+      throw new Error("controller Invalid Book category data");
     }
 
     const bookCategory = await addBookCategory(categoryData);
@@ -56,7 +62,6 @@ const updateBookCategoryController = async (req, res) => {
   try {
     const { categoryId } = req.params;
     const categoryData = req.body;
-
     if (!categoryId) {
       throw new Error("Invalid Book category id");
     }
