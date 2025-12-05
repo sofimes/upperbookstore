@@ -10,7 +10,7 @@ const AuthorListCat = ({ author }) => {
       transition={{ duration: 0.7 }}
       className="flex flex-col items-center text-center p-6 pb-10 "
     >
-      <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-lg  bg-gray-100 lg:w-70 lg:h-70">
+      <div className="relative w-40 h-40 md:w-48 md:h-48 lg:w-53 lg:h-53 rounded-full overflow-hidden shadow-lg bg-gray-100">
         {author.image ? (
           <img
             src={author.image}
