@@ -57,7 +57,7 @@ export const useAxiosInterceptor = () => {
             originalRequest._retry = true;
 
             try {
-              const { data } = await axios.get("/auth/refresh-token", {
+              const { data } = await api.get("/auth/refresh-token", {
                 withCredentials: true,
               });
               login({ user, accessToken: data.accessToken });
@@ -104,6 +104,7 @@ export const postApi = async (endpoint, data) => {
 export const putApi = async (endpoint, data) => {
   try {
     const response = await api.put(endpoint, data);
+    console.log("response", response.data);
     return response.data;
   } catch (error) {
     console.error("Error updating data: ", error);

@@ -48,8 +48,17 @@ const Auth = () => {
     const res = isSignUp
       ? await postApi("/auth/register", data)
       : await postApi("auth/login", data);
+    if (isSignUp) {
+      setIsSignUp(false); // Switch form to login
+      return; // Stop here (don't login automatically)
+    }
+
     login(res);
-    navigate("/");
+    if (res.user.role === "admin") {
+      navigate("/Admin-dashboard", { replace: true });
+    } else {
+      navigate("/", { replace: true });
+    }
   };
 
   return (
