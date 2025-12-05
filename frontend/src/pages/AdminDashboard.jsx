@@ -18,7 +18,7 @@ const AdminDashboard = () => {
         <ul className="space-y-3 px-4">
           <li>
             <Link
-              to="/admin-dashboard/book-management"
+              to="/admin-dashboard"
               className="block p-2 rounded hover:bg-gray-700"
             >
               Book Management
@@ -38,6 +38,14 @@ const AdminDashboard = () => {
               className="block p-2 rounded hover:bg-gray-700"
             >
               Add Book
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/admin-dashboard/book-category"
+              className="block p-2 rounded hover:bg-gray-700"
+            >
+              Book Category
             </Link>
           </li>
         </ul>
@@ -67,7 +75,7 @@ const AdminDashboard = () => {
             <ul className="space-y-3 px-4">
               <li>
                 <Link
-                  to="/admin-dashboard/book-management"
+                  to="/admin-dashboard"
                   className="block p-2 rounded hover:bg-gray-700"
                   onClick={toggleDrawer}
                 >
@@ -90,6 +98,15 @@ const AdminDashboard = () => {
                   onClick={toggleDrawer}
                 >
                   Add Book
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/admin-dashboard/book-category"
+                  className="block p-2 rounded hover:bg-gray-700"
+                  onClick={toggleDrawer}
+                >
+                  Book Category
                 </Link>
               </li>
             </ul>
