@@ -5,12 +5,12 @@ import BookCat from "../common/book/BookCat";
 const BookCollection = () => {
   const adventure = bookcollections[0];
 
-  const rightGrid = [
-    bookcollections[1],
-    bookcollections[2],
-    bookcollections[3],
-    bookcollections[4],
-  ];
+  // const rightGrid = [
+  //   bookcollections[1],
+  //   bookcollections[2],
+  //   bookcollections[3],
+  //   bookcollections[4],
+  // ];
 
   return (
     <motion.div className=" relative mb-20  flex flex-col justify-center items-center  lg:mx-48 overflow-x:hidden">
